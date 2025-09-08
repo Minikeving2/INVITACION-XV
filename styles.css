@@ -347,6 +347,6 @@ html, body {
 .decimasegunda-seccion img {
   width: 100%;        /* que ocupen todo el ancho disponible */
   height: auto;       /* mantener proporción */
-  border-radius: 10px; /* opcional, esquinas redondeadas */
   display: block;
+
 }
