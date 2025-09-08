@@ -278,3 +278,75 @@ html, body {
   border-radius: 10px;
   margin-left: 70px; /* deja espacio a la izquierda */
 }
+
+
+
+
+/* OCTAVA PARTE */
+.octava-seccion {
+  display: grid;
+  row-gap: 20px;
+  max-width: 498px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center; /* centrar artículos e imagen */
+  font-family: "Lora", sans-serif;
+}
+.octava-seccion img {
+  width: 100%;   /* se adapta al ancho disponible */
+  height: auto;  /* mantiene proporción */
+  max-width: 200px; /* opcional: limitar el tamaño si no quieres que se vea demasiado grande */
+  display: block;
+  margin: 20px auto 0; /* centrada y con espacio arriba */
+}
+.codigo {
+    font-family: "Cormorant", Sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+    font-style: normal;
+}
+.formal {
+    font-family: "Lora", Sans-serif;
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 1.5em;
+    letter-spacing: 1.5px;
+    color: #2D2D2D;
+}
+
+
+
+
+/* DECIMA PRIMERA PARTE */
+.decimaprimera-seccion {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  padding: 150px 60px;
+  row-gap: 3vh;
+}
+.decimaprimera-mensaje-corto {
+  text-align: center;
+  font-family: "Lora", Sans-serif;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1.5em;
+  letter-spacing: 1px;
+}
+
+
+
+/* DECIMA SEGUNDA PARTE */
+.decimasegunda-seccion {
+  max-width: 498px;   /* igual que las demás secciones */
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.decimasegunda-seccion img {
+  width: 100%;        /* que ocupen todo el ancho disponible */
+  height: auto;       /* mantener proporción */
+  border-radius: 10px; /* opcional, esquinas redondeadas */
+  display: block;
+}
