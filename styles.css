@@ -9,36 +9,42 @@ html, body {
   width: 498px;
   margin: 0 auto; /* centra horizontalmente */
   height: 100%;    /* opcional: si quieres que ocupe toda la altura */
-  background-color: #f5f5f5; /* solo para visualizar */
 }
 
 
 /* PRIMERA PARTE */
 .primera-seccion {
-  padding-top: 50vh;
-  display: grid;
-  place-items: center;
-  height: -webkit-fill-available;
-  background-image: url('primera.jpg');
-  background-size: cover;
-  background-position: center;
+  display: inline-block;             /* ✅ toma el ancho de la imagen */
   position: relative;
   color: white;
   text-align: center;
-  align-content: center;
-  row-gap: 70px;
-  overflow: hidden; /* asegura que la capa no se salga */
+  overflow: hidden;                  /* mantiene orden */
 }
 .primera-seccion::before {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%);
+  background: rgba(0, 0, 0, 0.4);    /* oscurece un poco para legibilidad */
   z-index: 0;
 }
-.primera-seccion > * {
-  position: relative;
+/* metemos la imagen directamente */
+.primera-seccion img {
+  display: block;
+  width: 100%;       /* la sección se ajusta al ancho natural de la imagen */
+  height: auto;
+}
+.primera-seccion > *:not(img) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   z-index: 1;
+}
+.texto {
+    padding-top: 60%;
+    width: 100%;
+    row-gap: 20%;
+    display: grid;
 }
 .contenido-texto {
   z-index: 1;
@@ -147,4 +153,128 @@ html, body {
   font-size: 1rem;
   margin-top: 5px;
   letter-spacing: 2px;
+}
+
+
+/* QUINTA PARTE */
+.quinta-seccion {
+    display: grid;
+    text-align: center;
+    align-content: center;
+    row-gap: 10px;
+}
+.dondeycuando {
+    padding: 40px 20px;
+    font-family: "Cormorant", Sans-serif;
+    font-size: 45px;
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: none;
+    line-height: 1.3em;
+    letter-spacing: 1px;
+    color: #000000;
+}
+.cartas {
+  border: 2px solid black;
+  margin: 0px 20px;
+}
+
+
+/* SEXTA PARTE TITULO*/
+.sexta-seccion-titulo {
+    display: grid;
+    text-align: center;
+    align-content: center;
+    row-gap: 10px;
+    padding: 150px 70px 10px 70px;
+    font-family: "Cormorant", Sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: none;
+    line-height: 1.3em;
+    letter-spacing: 1px;
+    color: #000000;
+}
+
+/* SEXTA PARTE */
+.sexta-seccion {
+  max-width: 498px;
+  margin: 0 auto;
+  padding: 50px 20px;
+  position: relative;
+  font-family: "Lora", Sans-serif;
+}
+/* Timeline base */
+.timeline {
+  position: relative;
+  margin: 0 auto;
+  --progress-height: 0%;
+}
+/* Línea gris fija */
+.timeline::after {
+  content: "";
+  position: absolute;
+  left: 30px; /* centro de los círculos */
+  transform: translateX(-50%);
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background: #e0e0e0;
+  z-index: 0;
+}
+/* Barra dinámica azul */
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 30px;
+  transform: translateX(-50%);
+  top: 0;
+  width: 4px;
+  height: var(--progress-height);
+  background: #0ec1e4;
+  z-index: 1;
+  transition: height 0.1s linear;
+}
+/* Cada ítem */
+.timeline-item {
+  margin-bottom: 70px;
+  position: relative;
+}
+/* Círculo con corazón */
+.timeline-item::before {
+  content: "\f004"; /* ícono corazón FA */
+  font-family: "Font Awesome 5 Free";
+  font-weight: 400; /* regular = corazón contorno */
+  font-size: 20px;
+  color: white; /* corazón siempre blanco */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: absolute;
+  left: 30px; /* centrado en la línea */
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 50px;
+  height: 50px;
+  background: #fff; /* <-- siempre blanco al inicio */
+  border-radius: 50%;
+  border: 3px solid #e0e0e0; /* gris claro */
+  z-index: 2; /* encima de la línea */
+  transition: background 0.3s ease, border 0.3s ease;
+}
+/* Círculo activo */
+.timeline-item.active::before {
+  background: #0ec1e4; /* relleno azul */
+  border-color: #0ec1e4;
+  /* corazón se queda blanco */
+}
+/* Contenido */
+.timeline-content {
+  padding: 15px;
+  border-radius: 10px;
+  margin-left: 70px; /* deja espacio a la izquierda */
 }
