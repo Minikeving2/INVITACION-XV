@@ -1,0 +1,150 @@
+/* FORMATEO INCIAL */
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+.contenedor {
+  width: 498px;
+  margin: 0 auto; /* centra horizontalmente */
+  height: 100%;    /* opcional: si quieres que ocupe toda la altura */
+  background-color: #f5f5f5; /* solo para visualizar */
+}
+
+
+/* PRIMERA PARTE */
+.primera-seccion {
+  padding-top: 50vh;
+  display: grid;
+  place-items: center;
+  height: -webkit-fill-available;
+  background-image: url('primera.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  color: white;
+  text-align: center;
+  align-content: center;
+  row-gap: 70px;
+  overflow: hidden; /* asegura que la capa no se salga */
+}
+.primera-seccion::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%);
+  z-index: 0;
+}
+.primera-seccion > * {
+  position: relative;
+  z-index: 1;
+}
+.contenido-texto {
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.5); /* mejora legibilidad */
+  padding: 20px;
+  border-radius: 8px;
+}
+.titulo {
+    font-family: "Lora", Sans-serif;
+    font-size: 28px;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-style: normal;
+    letter-spacing: 3px;
+    color: #FFFFFF;
+}
+.nombre {
+    font-family: "Cormorant", Sans-serif;
+    font-size: 65px;
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: none;
+    line-height: 1em;
+    color: #FFFFFF;
+}
+.fecha {
+    font-family: "Lora", Sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-style: normal;
+    letter-spacing: 3px;
+    color: #FFFFFF;
+}
+
+
+
+/* SEGUNDA PARTE */
+.segunda-seccion {
+  background-color: #0ec1e4;
+  color: white;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  padding: 6vh 7vh;
+  row-gap: 3vh;
+}
+.mensaje-corto {
+  text-align: center;
+  font-family: "Lora", Sans-serif;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1.5em;
+  letter-spacing: 1px;
+  color: #FFFFFF;
+}
+
+
+
+/* TERCERA PARTE */
+.tercera-seccion{
+  font-family: "Cormorant", Sans-serif;
+  margin: 6vh 4vh;
+  border: 2px solid black;
+  padding: 5vh;
+  text-align: center;
+  font-size: 30px;
+  line-height: 1.2em;
+}
+
+
+
+/* CUARTA PARTE */
+.cuarta-seccion {
+    height: 400px;
+    background-image: url(segunda.jpg);
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    place-items: center;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+    align-content: center;
+    row-gap: 10px;
+    position: relative;
+}
+.cuarta-seccion::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%);
+  z-index: 0;
+}
+.cuarta-seccion > * {
+  position: relative;
+  z-index: 1;
+}
+.contador {
+  display: flex;
+  gap: 20px;
+  font-size: 2rem;
+}
+.contador span {
+  display: block;
+  font-size: 1rem;
+  margin-top: 5px;
+  letter-spacing: 2px;
+}
