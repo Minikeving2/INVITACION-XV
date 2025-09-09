@@ -325,7 +325,22 @@ body {
   padding: 15px;
   border-radius: 10px;
   margin-left: 70px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columnas iguales */
+  gap: 10px; /* espacio entre items */
   /* deja espacio a la izquierda */
+}
+.logos-linea-tiempo {
+  display: grid;
+  place-items: center; /* centra ícono */
+  align-items: center;
+  width: 80px;  
+  height: 80px;
+  background: url("acuarela.png") no-repeat center/cover;
+}
+.icono {
+  width: 64px;
+  height: 64px;
 }
 
 
