@@ -326,18 +326,23 @@ body {
   border-radius: 10px;
   margin-left: 70px;
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 columnas iguales */
-  gap: 10px; /* espacio entre items */
+  grid-template-columns: repeat(2, 1fr);
+  /* 2 columnas iguales */
+  gap: 10px;
+  /* espacio entre items */
   /* deja espacio a la izquierda */
 }
+
 .logos-linea-tiempo {
   display: grid;
-  place-items: center; /* centra ícono */
+  place-items: center;
+  /* centra ícono */
   align-items: center;
-  width: 80px;  
-  height: 80px;
+  width: 130px;
+  height: 108px;
   background: url("acuarela.png") no-repeat center/cover;
 }
+
 .icono {
   width: 64px;
   height: 64px;
@@ -372,6 +377,7 @@ body {
   font-size: 20px;
   font-family: "Cormorant", Sans-serif;
 }
+
 .boton-mapa {
   display: inline-block;
   padding: 10px 20px;
@@ -381,7 +387,7 @@ body {
   font-family: 'Cormorant', serif;
   font-size: 18px;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: background-color 0.3s ease;
   margin-top: 10px;
 }
