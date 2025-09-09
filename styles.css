@@ -1,83 +1,99 @@
 /* FORMATEO INCIAL */
-html, body {
+html,
+body {
   width: 100%;
   height: 100%;
   margin: 0;
   padding: 0;
 }
+
 .contenedor {
   width: 498px;
-  margin: 0 auto; /* centra horizontalmente */
-  height: 100%;    /* opcional: si quieres que ocupe toda la altura */
+  margin: 0 auto;
+  border: 2px solid #555;
+  /* centra horizontalmente */
 }
 
 
 /* PRIMERA PARTE */
 .primera-seccion {
-  display: inline-block;             /* ✅ toma el ancho de la imagen */
+  display: inline-block;
+  /* ✅ toma el ancho de la imagen */
   position: relative;
   color: white;
   text-align: center;
-  overflow: hidden;                  /* mantiene orden */
+  overflow: hidden;
+  /* mantiene orden */
 }
+
 .primera-seccion::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.4);    /* oscurece un poco para legibilidad */
+  background: rgba(0, 0, 0, 0.4);
+  /* oscurece un poco para legibilidad */
   z-index: 0;
 }
+
 /* metemos la imagen directamente */
 .primera-seccion img {
   display: block;
-  width: 100%;       /* la sección se ajusta al ancho natural de la imagen */
+  width: 100%;
+  /* la sección se ajusta al ancho natural de la imagen */
   height: auto;
 }
-.primera-seccion > *:not(img) {
+
+.primera-seccion>*:not(img) {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1;
 }
+
 .texto {
-    padding-top: 60%;
-    width: 100%;
-    row-gap: 20%;
-    display: grid;
+  padding-top: 60%;
+  width: 100%;
+  row-gap: 20%;
+  display: grid;
 }
+
 .contenido-texto {
   z-index: 1;
-  background-color: rgba(0, 0, 0, 0.5); /* mejora legibilidad */
+  background-color: rgba(0, 0, 0, 0.5);
+  /* mejora legibilidad */
   padding: 20px;
   border-radius: 8px;
 }
+
 .titulo {
-    font-family: "Lora", Sans-serif;
-    font-size: 28px;
-    font-weight: 500;
-    text-transform: uppercase;
-    font-style: normal;
-    letter-spacing: 3px;
-    color: #FFFFFF;
+  font-family: "Lora", Sans-serif;
+  font-size: 28px;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-style: normal;
+  letter-spacing: 3px;
+  color: #FFFFFF;
 }
+
 .nombre {
-    font-family: "Cormorant", Sans-serif;
-    font-size: 65px;
-    font-weight: 400;
-    font-style: normal;
-    text-decoration: none;
-    line-height: 1em;
-    color: #FFFFFF;
+  font-family: "Cormorant", Sans-serif;
+  font-size: 65px;
+  font-weight: 400;
+  font-style: normal;
+  text-decoration: none;
+  line-height: 1em;
+  color: #FFFFFF;
 }
+
 .fecha {
-    font-family: "Lora", Sans-serif;
-    font-size: 20px;
-    font-weight: 500;
-    text-transform: uppercase;
-    font-style: normal;
-    letter-spacing: 3px;
-    color: #FFFFFF;
+  font-family: "Lora", Sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-style: normal;
+  letter-spacing: 3px;
+  color: #FFFFFF;
 }
 
 
@@ -92,6 +108,7 @@ html, body {
   padding: 6vh 7vh;
   row-gap: 3vh;
 }
+
 .mensaje-corto {
   text-align: center;
   font-family: "Lora", Sans-serif;
@@ -105,7 +122,7 @@ html, body {
 
 
 /* TERCERA PARTE */
-.tercera-seccion{
+.tercera-seccion {
   font-family: "Cormorant", Sans-serif;
   margin: 6vh 4vh;
   border: 2px solid black;
@@ -119,19 +136,20 @@ html, body {
 
 /* CUARTA PARTE */
 .cuarta-seccion {
-    height: 400px;
-    background-image: url(segunda.jpg);
-    background-size: cover;
-    background-position: center;
-    display: grid;
-    place-items: center;
-    color: white;
-    text-align: center;
-    overflow: hidden;
-    align-content: center;
-    row-gap: 10px;
-    position: relative;
+  height: 400px;
+  background-image: url(segunda.jpg);
+  background-size: cover;
+  background-position: center;
+  display: grid;
+  place-items: center;
+  color: white;
+  text-align: center;
+  overflow: hidden;
+  align-content: center;
+  row-gap: 10px;
+  position: relative;
 }
+
 .cuarta-seccion::before {
   content: "";
   position: absolute;
@@ -139,15 +157,18 @@ html, body {
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%);
   z-index: 0;
 }
-.cuarta-seccion > * {
+
+.cuarta-seccion>* {
   position: relative;
   z-index: 1;
 }
+
 .contador {
   display: flex;
   gap: 20px;
   font-size: 2rem;
 }
+
 .contador span {
   display: block;
   font-size: 1rem;
@@ -158,43 +179,54 @@ html, body {
 
 /* QUINTA PARTE */
 .quinta-seccion {
-    display: grid;
-    text-align: center;
-    align-content: center;
-    row-gap: 10px;
+  display: grid;
+  text-align: center;
+  align-content: center;
+  row-gap: 10px;
 }
+
 .dondeycuando {
-    padding: 40px 20px;
-    font-family: "Cormorant", Sans-serif;
-    font-size: 45px;
-    font-weight: 400;
-    font-style: normal;
-    text-decoration: none;
-    line-height: 1.3em;
-    letter-spacing: 1px;
-    color: #000000;
+  padding: 40px 20px;
+  font-family: "Cormorant", Sans-serif;
+  font-size: 45px;
+  font-weight: 400;
+  font-style: normal;
+  text-decoration: none;
+  line-height: 1.3em;
+  letter-spacing: 1px;
+  color: #000000;
 }
+
 .cartas {
-  border: 2px solid black;
   margin: 0px 20px;
+  border: 2px solid #0ec1e4;
+  background-color: #e8fbff;
+}
+
+.cartas img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  /* opcional, para que la imagen mantenga proporción y recorte si es necesario */
 }
 
 
 /* SEXTA PARTE TITULO*/
 .sexta-seccion-titulo {
-    display: grid;
-    text-align: center;
-    align-content: center;
-    row-gap: 10px;
-    padding: 150px 70px 10px 70px;
-    font-family: "Cormorant", Sans-serif;
-    font-size: 30px;
-    font-weight: 400;
-    font-style: normal;
-    text-decoration: none;
-    line-height: 1.3em;
-    letter-spacing: 1px;
-    color: #000000;
+  display: grid;
+  text-align: center;
+  align-content: center;
+  row-gap: 10px;
+  padding: 150px 70px 10px 70px;
+  font-family: "Cormorant", Sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  font-style: normal;
+  text-decoration: none;
+  line-height: 1.3em;
+  letter-spacing: 1px;
+  color: #000000;
 }
 
 /* SEXTA PARTE */
@@ -205,17 +237,20 @@ html, body {
   position: relative;
   font-family: "Lora", Sans-serif;
 }
+
 /* Timeline base */
 .timeline {
   position: relative;
   margin: 0 auto;
   --progress-height: 0%;
 }
+
 /* Línea gris fija */
 .timeline::after {
   content: "";
   position: absolute;
-  left: 30px; /* centro de los círculos */
+  left: 30px;
+  /* centro de los círculos */
   transform: translateX(-50%);
   top: 0;
   width: 4px;
@@ -223,6 +258,7 @@ html, body {
   background: #e0e0e0;
   z-index: 0;
 }
+
 /* Barra dinámica azul */
 .timeline::before {
   content: "";
@@ -236,48 +272,187 @@ html, body {
   z-index: 1;
   transition: height 0.1s linear;
 }
+
 /* Cada ítem */
 .timeline-item {
   margin-bottom: 70px;
   position: relative;
 }
+
 /* Círculo con corazón */
 .timeline-item::before {
-  content: "\f004"; /* ícono corazón FA */
+  content: "\f004";
+  /* ícono corazón FA */
   font-family: "Font Awesome 5 Free";
-  font-weight: 400; /* regular = corazón contorno */
+  font-weight: 400;
+  /* regular = corazón contorno */
   font-size: 20px;
-  color: white; /* corazón siempre blanco */
+  color: white;
+  /* corazón siempre blanco */
 
   display: flex;
   align-items: center;
   justify-content: center;
 
   position: absolute;
-  left: 30px; /* centrado en la línea */
+  left: 30px;
+  /* centrado en la línea */
   top: 50%;
   transform: translate(-50%, -50%);
 
   width: 50px;
   height: 50px;
-  background: #fff; /* <-- siempre blanco al inicio */
+  background: #fff;
+  /* <-- siempre blanco al inicio */
   border-radius: 50%;
-  border: 3px solid #e0e0e0; /* gris claro */
-  z-index: 2; /* encima de la línea */
+  border: 3px solid #e0e0e0;
+  /* gris claro */
+  z-index: 2;
+  /* encima de la línea */
   transition: background 0.3s ease, border 0.3s ease;
 }
+
 /* Círculo activo */
 .timeline-item.active::before {
-  background: #0ec1e4; /* relleno azul */
+  background: #0ec1e4;
+  /* relleno azul */
   border-color: #0ec1e4;
   /* corazón se queda blanco */
 }
+
 /* Contenido */
 .timeline-content {
   padding: 15px;
   border-radius: 10px;
-  margin-left: 70px; /* deja espacio a la izquierda */
+  margin-left: 70px;
+  /* deja espacio a la izquierda */
 }
+
+
+
+
+
+
+
+/* SEPTIMA PARTE */
+.septima-seccion {
+  display: grid;
+  row-gap: 20px;
+}
+
+.carta-2 {
+  margin: 30px;
+  border: 2px solid #0ec1e4;
+  border-radius: 10px;
+  padding: 40px 20px;
+  background-color: #e8fbff;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+.info {
+  justify-items: center;
+  padding: 40px 0px;
+  display: grid;
+  row-gap: 20px;
+  font-size: 20px;
+  font-family: "Cormorant", Sans-serif;
+}
+.boton-mapa {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #0ec1e4;
+  color: white;
+  text-decoration: none;
+  font-family: 'Cormorant', serif;
+  font-size: 18px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.boton-mapa:hover {
+  background-color: #0aa5c4;
+}
+
+.tipo-lugar {
+  font-size: 35px !important;
+  font-family: "Cormorant", Sans-serif;
+  font-size: 30px;
+  line-height: 1.3em;
+  letter-spacing: 0px;
+}
+
+.texto-formulario {
+  text-align: center;
+}
+
+#invitacion {
+  font-size: 35px;
+  font-family: "Cormorant", Sans-serif;
+}
+
+#familia {
+  font-size: 20px;
+  line-height: 1.5em;
+  letter-spacing: 0.5px;
+}
+
+/* Estilo para los checkboxes */
+label {
+  display: flex;
+  align-items: center;
+  margin: 8px 0;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+}
+
+/* Estilo visual del checkbox */
+input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  border: 2px solid #555;
+  border-radius: 4px;
+  background-color: #fff;
+  cursor: pointer;
+  vertical-align: middle;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+/* Estilo cuando está seleccionado */
+input[type="checkbox"]:checked {
+  background-color: #0ec1e4;
+  border-color: #0ec1e4;
+}
+
+/* Estilo cuando está deshabilitado */
+input[type="checkbox"]:disabled {
+  background-color: #eee;
+  border-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Botón de confirmar */
+button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #0ec1e4;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0aa5c4;
+}
+
 
 
 
@@ -288,30 +463,38 @@ html, body {
   row-gap: 20px;
   max-width: 498px;
   margin: 0 auto;
-  padding: 20px;
-  text-align: center; /* centrar artículos e imagen */
+  padding: 200px 20px;
+  text-align: center;
+  /* centrar artículos e imagen */
   font-family: "Lora", sans-serif;
 }
+
 .octava-seccion img {
-  width: 100%;   /* se adapta al ancho disponible */
-  height: auto;  /* mantiene proporción */
-  max-width: 200px; /* opcional: limitar el tamaño si no quieres que se vea demasiado grande */
+  width: 100%;
+  /* se adapta al ancho disponible */
+  height: auto;
+  /* mantiene proporción */
+  max-width: 200px;
+  /* opcional: limitar el tamaño si no quieres que se vea demasiado grande */
   display: block;
-  margin: 20px auto 0; /* centrada y con espacio arriba */
+  margin: 20px auto 0;
+  /* centrada y con espacio arriba */
 }
+
 .codigo {
-    font-family: "Cormorant", Sans-serif;
-    font-size: 40px;
-    font-weight: 400;
-    font-style: normal;
+  font-family: "Cormorant", Sans-serif;
+  font-size: 40px;
+  font-weight: 400;
+  font-style: normal;
 }
+
 .formal {
-    font-family: "Lora", Sans-serif;
-    font-size: 19px;
-    font-weight: 400;
-    line-height: 1.5em;
-    letter-spacing: 1.5px;
-    color: #2D2D2D;
+  font-family: "Lora", Sans-serif;
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 1.5em;
+  letter-spacing: 1.5px;
+  color: #2D2D2D;
 }
 
 
@@ -319,12 +502,15 @@ html, body {
 
 /* DECIMA PRIMERA PARTE */
 .decimaprimera-seccion {
+  background-color: #0ec1e4;
+  color: white;
   display: grid;
   align-items: center;
   justify-items: center;
   padding: 150px 60px;
   row-gap: 3vh;
 }
+
 .decimaprimera-mensaje-corto {
   text-align: center;
   font-family: "Lora", Sans-serif;
@@ -338,14 +524,18 @@ html, body {
 
 /* DECIMA SEGUNDA PARTE */
 .decimasegunda-seccion {
-  max-width: 498px;   /* igual que las demás secciones */
+  max-width: 498px;
+  /* igual que las demás secciones */
   margin: 0 auto;
   padding: 20px;
   display: flex;
   flex-direction: column;
 }
+
 .decimasegunda-seccion img {
-  width: 100%;        /* que ocupen todo el ancho disponible */
-  height: auto;       /* mantener proporción */
+  width: 100%;
+  /* que ocupen todo el ancho disponible */
+  height: auto;
+  /* mantener proporción */
   display: block;
 }

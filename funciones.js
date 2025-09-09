@@ -66,3 +66,21 @@ document.addEventListener("DOMContentLoaded", () => {
     actualizarContador();
   }
 });
+
+const noAsistiran = document.getElementById("no-asistiremos");
+const otrosCheckboxes = document.querySelectorAll(".check-opcion");
+
+noAsistiran.addEventListener("change", function () {
+  if (this.checked) {
+    // Desmarcar y deshabilitar todos los demás checkboxes
+    otrosCheckboxes.forEach(checkbox => {
+      checkbox.checked = false;
+      checkbox.disabled = true;
+    });
+  } else {
+    // Habilitar todos los demás checkboxes
+    otrosCheckboxes.forEach(checkbox => {
+      checkbox.disabled = false;
+    });
+  }
+}); s
