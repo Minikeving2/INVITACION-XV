@@ -147,3 +147,56 @@ form.addEventListener("submit", async (e) => {
   }
 });
 
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  // 👇 Aquí defines todas tus familias
+  const invitadosPorId = {
+    "1": {
+      familia: "Familia Maldonado Garza",
+      invitados: ["Sara Maldonado Garza", "Felipe Ruiz Garza", "Laura Ruiz Garza", "Carlos Ruiz Garza"]
+    },
+    "2": {
+      familia: "Familia Hernández López",
+      invitados: ["Andrés Hernández", "Juliana López"]
+    },
+    "3": {
+      familia: "Familia Pérez Ramírez",
+      invitados: ["Camila Pérez", "Juan Ramírez", "María Ramírez"]
+    }
+    // 👈 puedes seguir agregando
+  };
+
+  // Detectar el número en la URL
+  const path = window.location.pathname.split("/").pop(); // "1", "2", etc.
+  const datos = invitadosPorId[path];
+
+  if (datos) {
+    // Rellenar familia
+    document.getElementById("familia").textContent = datos.familia;
+
+    // Generar checkboxes de invitados
+    const lista = document.getElementById("lista-invitados");
+    lista.innerHTML = ""; // limpiar antes
+    datos.invitados.forEach(nombre => {
+      const label = document.createElement("label");
+      label.innerHTML = `
+        <input type="checkbox" name="asistentes" value="${nombre}" class="check-opcion">
+        ${nombre}
+      `;
+      lista.appendChild(label);
+    });
+
+    // Agregar checkbox de "No podremos asistir"
+    const labelNo = document.createElement("label");
+    labelNo.innerHTML = `
+      <input type="checkbox" id="no-asistiremos" name="asistentes" value="No podremos asistir">
+      No podremos asistir
+    `;
+    lista.appendChild(labelNo);
+  } else {
+    // Si el id no existe, mensaje de error
+    document.getElementById("familia").textContent = "Invitación no encontrada";
+  }
+});
