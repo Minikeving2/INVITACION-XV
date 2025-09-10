@@ -133,7 +133,7 @@ form.addEventListener("submit", async (e) => {
   formData.append("nombres", seleccionados.join(", "));
 
   try {
-    await fetch("https://script.google.com/macros/s/AKfycby-QaY9YgURIF-ZwSWbeTrxpjc1R4eu9wo6W_brA123SxWAe6Hnvz3lkFk1IhUHLsBX/exec", {
+    await fetch("https://script.google.com/macros/s/AKfycbyXOaNswbyl5haHnzxqtAmB98oR3ss6GJkYhqvSYrQofhPA-S73daxqLHY1GPcbEEqQ/exec", {
       method: "POST",
       body: formData,
       mode: "no-cors"   // 👈 clave
