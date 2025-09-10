@@ -83,18 +83,95 @@ document.addEventListener("DOMContentLoaded", () => {
   /* ===== Invitados dinámicos según URL ===== */
   const invitadosPorId = {
     "1": {
-      familia: "Familia Maldonado Garza",
-      invitados: ["Sara Maldonado Garza", "Felipe Ruiz Garza", "Laura Ruiz Garza", "Carlos Ruiz Garza"]
+      familia: "Familia Cáceres García",
+      invitados: ["Fredy Cáceres", "Amparo García", "Dixon Mora", "Dana Cáceres", "Johana Hernández"]
     },
     "2": {
-      familia: "Familia Hernández López",
-      invitados: ["Andrés Hernández", "Juliana López"]
+      familia: "Familia Sandoval Hernández",
+      invitados: ["Fabio Sandoval", "Yenifer Hernández", "Julieta Sandoval", "Emiliano Sandoval"]
     },
     "3": {
-      familia: "Familia Pérez Ramírez",
-      invitados: ["Camila Pérez", "Juan Ramírez", "María Ramírez"]
+      familia: "Familia Mora Murillo",
+      invitados: ["María Mora", "Santiago Murillo"]
+    },
+    "4": {
+      familia: "Familia Valencia",
+      invitados: ["Lisbeth Valencia", "Angie Valencia", "Brayan Valencia"]
+    },
+    "5": {
+      familia: "Familia Rolón Jaramillo",
+      invitados: ["Fernando Rolón", "Santiago Rolón"]
+    },
+    "6": {
+      familia: "Familia Rincón Sayago",
+      invitados: ["Martha Rincón", "Jesús Rincón", "Charlie Sayago"]
+    },
+    "7": {
+      familia: "Familia Chacón Bayona",
+      invitados: ["Fredy Chacón", "Maruja Bayona"]
+    },
+    "8": {
+      familia: "Familia Sayago Rozo",
+      invitados: ["Wilson Sayago", "Rosalbina Rozo"]
+    },
+    "9": {
+      familia: "Familia Yañez Chacón",
+      invitados: ["Iván Yañez", "Mari Chacón", "Nicol Yañez"]
+    },
+    "10": {
+      familia: "Familia Tafur Chacón",
+      invitados: ["Oscar Tafur", "Mongui Chacón", "Ingrid Tafur"]
+    },
+    "11": {
+      familia: "Familia Martinez Luna",
+      invitados: ["Julio Martinez", "Mirian Luna"]
+    },
+    "12": {
+      familia: "Familia Padrón Martinez",
+      invitados: ["Francisco Padrón", "Judi Martinez", "Tomás Padrón", "Angela Villamizar"]
+    },
+    "13": {
+      familia: "Familia Durán Marchan",
+      invitados: ["Manuel Durán", "Kelly Marchan", "Viviana Durán", "Emanuel Durán"]
+    },
+    "14": {
+      familia: "Familia Maldonado",
+      invitados: ["Uvaldina Maldonado", "Johana Hernández", "Reinaldo José"]
+    },
+    "15": {
+      familia: "Familia Martinez Díaz",
+      invitados: ["Edecio Martinez", "Paulina Díaz"]
+    },
+    "16": {
+      familia: "Familia Maldonado Calderón",
+      invitados: ["Cristian Maldonado", "Leidy Johanna Calderón Méndez", "Maximiliano Maldonado Calderón"]
+    },
+    "17": {
+      familia: "Familia Pabón Figuerova",
+      invitados: ["Giovanni Pabón", "Adriana Figuerova", "Darly Pabón"]
+    },
+    "18": {
+      familia: "Familia Figuerova Maldonado",
+      invitados: ["Jhony Figuerova", "Belkis Maldonado"]
+    },
+    "19": {
+      familia: "Familia Galvis Pabón",
+      invitados: ["Lorena Pabón", "Yoliam Galvis"]
+    },
+    "20": {
+      familia: "Familia Tarazona Rincón",
+      invitados: ["Mora Rincón", "Ronald Tarazona"]
+    },
+    "21": {
+      familia: "Familia Diaz",
+      invitados: ["Nathali Díaz"]
+    },
+    "22": {
+      familia: "Familia Castillo",
+      invitados: ["Martha Castillo y Acompañante"]
     }
   };
+
 
   const params = new URLSearchParams(window.location.search);
   const id = params.get("id");
