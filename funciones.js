@@ -168,9 +168,11 @@ document.addEventListener("DOMContentLoaded", () => {
     // 👈 puedes seguir agregando
   };
 
-  // Detectar el número en la URL
-  const path = window.location.pathname.split("/").pop(); // "1", "2", etc.
-  const datos = invitadosPorId[path];
+  // Detectar el id en la URL (ej: ?id=2)
+  const params = new URLSearchParams(window.location.search);
+  const id = params.get("id");
+
+  const datos = invitadosPorId[id];
 
   if (datos) {
     // Rellenar familia
