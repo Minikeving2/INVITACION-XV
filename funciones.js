@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const invitadosPorId = {
     "1": {
       familia: "Familia Cáceres García",
-      invitados: ["Fredy Cáceres", "Amparo García", "Dixon Mora", "Dana Cáceres", "Johana Hernández"]
+      invitados: ["Fredy Cáceres", "Amparo García", "Dixon Mora", "Dana Cáceres", "Johana Hernández", "Kevin Cáceres"]
     },
     "2": {
       familia: "Familia Sandoval Hernández",
@@ -242,3 +242,4 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
