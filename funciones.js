@@ -114,6 +114,7 @@ window.addEventListener('click', () => {
 
 // Enviar confirmación a Google Sheets.
 const form = document.querySelector("form");
+
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
 
@@ -127,14 +128,15 @@ form.addEventListener("submit", async (e) => {
     return;
   }
 
-  // Datos como form-data para evitar preflight
   const formData = new FormData();
+  formData.append("familia", document.getElementById("familia").textContent);
   formData.append("nombres", seleccionados.join(", "));
 
   try {
-    await fetch("https://script.google.com/macros/s/AKfycbyHJTV9XFhWWiT3cCI3VwTWLPMqZ2E5odGfW7EAXq3zUi7fUx6ctM3vcDovPtNpdtvU/exec", {
+    await fetch("https://script.google.com/macros/s/AKfycbxkCjeqObRFMWY64_-9FdDmiqy_4bHqoIsMvgSn51Urhg5Ul4xNvmASogCUG2NN_nv4/exec", {
       method: "POST",
-      body: formData
+      body: formData,
+      mode: "no-cors"   // 👈 clave
     });
 
     alert("🎉 Confirmación registrada con éxito");
@@ -144,3 +146,4 @@ form.addEventListener("submit", async (e) => {
     alert("❌ Hubo un error, intenta de nuevo.");
   }
 });
+
