@@ -111,3 +111,39 @@ window.addEventListener('click', () => {
     musicaReproducida = true;
   }
 });
+
+// Enviar confirmación a Google Sheets
+const form = document.querySelector("form");
+
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  const seleccionados = [];
+  document.querySelectorAll("input[name='asistentes']:checked").forEach(cb => {
+    seleccionados.push(cb.value);
+  });
+
+  if (seleccionados.length === 0) {
+    alert("Por favor selecciona al menos una opción.");
+    return;
+  }
+
+  // Datos que enviaremos
+  const payload = {
+    nombres: seleccionados.join(", ")
+  };
+
+  try {
+    await fetch("https://script.google.com/macros/s/AKfycbyT5ejq8Vq-fiD4TSkPJU9vFMkCP1UxE7EKS0rB3pd_AmmO4tc5K9M1r71Qe6jsKXpc/exec", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload)
+    });
+
+    alert("🎉 Confirmación registrada con éxito");
+    form.reset();
+  } catch (err) {
+    console.error("Error enviando a Google Sheets:", err);
+    alert("❌ Hubo un error, intenta de nuevo.");
+  }
+});
