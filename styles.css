@@ -521,6 +521,76 @@ button:hover {
 
 
 
+
+/* NOVEN PARTE */
+.novena-seccion {
+  background-color: #0ec1e4;
+  color: white;
+  display: grid;
+  row-gap: 20px;
+  max-width: 498px;
+  margin: 0 auto;
+  padding: 100px 20px;
+  text-align: center;
+  /* centrar artículos e imagen */
+  font-family: "Lora", sans-serif;
+}
+
+.novena-seccion img {
+  width: 100%;
+  /* se adapta al ancho disponible */
+  height: auto;
+  /* mantiene proporción */
+  max-width: 200px;
+  /* opcional: limitar el tamaño si no quieres que se vea demasiado grande */
+  display: block;
+  margin: 20px auto 0;
+  /* centrada y con espacio arriba */
+}
+
+.texto-sobre {
+  font-family: "Lora", Sans-serif;
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 1.5em;
+  letter-spacing: 1.5px;
+}
+.sobre {
+  filter: brightness(0) invert(1);
+}
+
+
+
+
+
+
+/* DECIMA PARTE */
+.decima-seccion {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  padding: 50px 60px;
+  row-gap: 3vh;
+}
+
+.decima-mensaje-corto {
+  text-align: center;
+  font-family: "Lora", Sans-serif;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1.5em;
+  letter-spacing: 1px;
+}
+.decima-seccion img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+
+
 /* DECIMA PRIMERA PARTE */
 .decimaprimera-seccion {
   background-color: #0ec1e4;

@@ -83,4 +83,18 @@ noAsistiran.addEventListener("change", function () {
       checkbox.disabled = false;
     });
   }
-}); s
+});
+
+let musicaReproducida = false;
+let audio;
+
+window.addEventListener('click', () => {
+  if (!musicaReproducida) {
+    audio = new Audio('musica.mp3');
+    audio.loop = true;
+    audio.play().catch(err => {
+      console.error('Error al reproducir audio:', err);
+    });
+    musicaReproducida = true;
+  }
+});
