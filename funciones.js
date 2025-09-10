@@ -1,3 +1,16 @@
+// Pantalla inicial del sobre
+window.addEventListener("DOMContentLoaded", () => {
+  const overlay = document.getElementById("overlay");
+  if (overlay) {
+    document.body.style.overflow = "hidden"; // bloquear scroll al inicio
+    overlay.addEventListener("click", () => {
+      overlay.style.display = "none"; // quitar el sobre
+      document.body.style.overflow = "auto"; // restaurar scroll
+    });
+  }
+});
+
+
 document.addEventListener("DOMContentLoaded", () => {
   /* ===== Timeline progreso en scroll ===== */
   const timeline = document.querySelector(".timeline");
