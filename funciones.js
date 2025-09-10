@@ -112,9 +112,8 @@ window.addEventListener('click', () => {
   }
 });
 
-// Enviar confirmación a Google Sheets
+// Enviar confirmación a Google Sheets.
 const form = document.querySelector("form");
-
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
 
@@ -128,16 +127,14 @@ form.addEventListener("submit", async (e) => {
     return;
   }
 
-  // Datos que enviaremos
-  const payload = {
-    nombres: seleccionados.join(", ")
-  };
+  // Datos como form-data para evitar preflight
+  const formData = new FormData();
+  formData.append("nombres", seleccionados.join(", "));
 
   try {
-    await fetch("https://script.google.com/macros/s/AKfycbyT5ejq8Vq-fiD4TSkPJU9vFMkCP1UxE7EKS0rB3pd_AmmO4tc5K9M1r71Qe6jsKXpc/exec", {
+    await fetch("https://script.google.com/macros/s/AKfycbyHJTV9XFhWWiT3cCI3VwTWLPMqZ2E5odGfW7EAXq3zUi7fUx6ctM3vcDovPtNpdtvU/exec", {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload)
+      body: formData
     });
 
     alert("🎉 Confirmación registrada con éxito");
