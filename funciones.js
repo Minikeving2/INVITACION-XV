@@ -169,6 +169,18 @@ document.addEventListener("DOMContentLoaded", () => {
     "22": {
       familia: "Familia Castillo",
       invitados: ["Martha Castillo y Acompañante"]
+    },
+    "23": {
+      familia: "Familia Roldon Vergara",
+      invitados: ["Daniela Valentina"]
+    },
+    "24": {
+      familia: "Familia Tellez Niño",
+      invitados: ["Jesus Ivan Tellez Niño"]
+    },
+    "25": {
+      familia: "Familia Rios",
+      invitados: ["Willian Rios"]
     }
   };
 
@@ -242,4 +254,5 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
 
